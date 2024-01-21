@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Image Captioning</title>
+</head>
+<body>
+    <h1>Image Captioning</h1>
+
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="userfile" placeholder="Your Image">
+        <input type="submit">
+    </form>
+
+    {% if your_result %}
+
+        <img src="{{your_result['image']}}" alt="">
+        <br>
+        <h1>Generated Caption: <i> {{ your_result['caption'] }} </i> </h1>
+    {% endif %}
+
+</body>
+</html>
